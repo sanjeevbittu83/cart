@@ -45,16 +45,18 @@ class CartItem extends
                         <img alt="increase"
                             className="action-icon"
                             src="https://image.flaticon.com/icons/svg/992/992651.svg"
-                            onClick={this.increaseQuantity} />
+                            onClick={()=> this.props.onIncreaseQuanatity(this.props.product)} />
+                        
+                        
                         <img alt="decrease" className="action-icon" 
                         src="https://image.flaticon.com/icons/svg/2716/2716405.svg"
-                        onClick={
-                            this.decreaseQuantity
-                        }
-                         />
+                        onClick={()=> this.props.onDecreaseQuanatity(this.props.product)} />
+
+
+
                         <img alt="delete" className="action-icon" 
                         src="https://image.flaticon.com/icons/svg/3159/3159145.svg" 
-                        onClick={this.deleteQuantity}
+                        onClick={()=>this.props.onDeleteQuantity(this.props.product.id)}
                         />
 
 
